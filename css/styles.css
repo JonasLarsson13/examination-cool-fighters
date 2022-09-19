@@ -300,16 +300,25 @@ nav a:hover {
     color: rgba(0, 0, 0, 0.4);
 }
 .grid > a {
+    font-family: 'Fira Sans', sans-serif;
     background-color: #A9A19E;
-    color: #000000;
-    top: 1rem;
-    left: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
     grid-column: span 6;
     grid-row: span 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+    font-size: 17px;
+    flex-direction: column;
 }
-.footer {
+.grid > a svg {
+    margin: -6px 0;
+    margin-top: 0;
+}
+footer {
   grid-column: span 6;
-  grid-row: span 1;
   height: 340px;
   background-color: #777574;
 }
