@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;700&family=Frank+Ruhl+Libre:wght@700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #e5e5e5;
+}
+
+h1, h2, h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+}
+h1, h2 {
+    font-weight: 900;
+}
+h3 {
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+h1 {
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 900;
+}
+h2 {
+    font-size: 32px;
+    color: white;
+}
+h3 {
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.blue-top {
+    position: relative;
+    grid-column: 1 / span 3;
+    grid-row: span 8;
+    background: #C7DDEA;
+    min-height: 544px;
+    padding: 71px 128px 0 105px;
+    gap: 1.6rem;
+}
+
+.blue-top p {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: .1px;
+    margin-bottom: 2rem;
+}
+
+.blue-top p span {
+    color: white;
+}
+
+.blue-top img {
+    position: absolute;
+    bottom: 0;
+    right: 17px;
+    width: 286px;
+}
+
+.red-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F17949;
+}
+
+.yellow-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFB939;
+}
+
+.small-top {
+    grid-column: span 3;
+    grid-row: span 4;
+}
+.top-text {
+  font-size: 11px;
+  color:rgba(0, 0, 0, 0.5);
+}
+
+button {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #ffffff;
+    padding: 0.8rem 2.4rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    transform: scale(1.05);
+}
+nav {
+  height: 60px;
+  grid-column: 2 / 6;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+    font-family: 'Fira Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    opacity: 0.4;
+    width: 20%;
+    height: 57px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-size: 12px;
+}
+nav a:nth-child(1) {
+    opacity: 1;
+}
+nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-decoration-color: #000;
+}
+.main-top {
+    padding: 103px 129px 0 107px;
+    background: #A9A19E;
+    grid-column: span 6;
+    grid-row: span 9;
+    height: 612px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.main-middle {
+    background: #FAB131;
+    grid-column: span 6;
+    grid-row: span 10;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-middle h1 {
+    color: white;
+    padding: 2rem 0;
+    padding-top: 3rem;
+}
+.main-middle p {
+    color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 442px;
+    text-align: center;
+    line-height: 1.4;
+}
+.main-top-top {
+    display: flex;
+    width: 100%;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.main-top-top div {
+    width: 320px;
+}
+.main-top-top div button {
+    margin-top: 3rem;
+}
+.main-top-top p {
+    width: 280px;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.6
+}
+
+.cards {
+    position: relative;
+    display: flex;
+    bottom: -120px;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    min-width: 256px;
+    height: 308px;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.card p {
+    padding: 0 1rem;
+    width: 100%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 11px;
+}
+
+.card .image {
+    position: relative;
+    top: -20px;
+    border-radius: 4px;
+    width: 236px;
+    height: 150px;
+    background-position: top 12px center;
+    background-size: 38%;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+}
+.children {
+    background: url(/images/child.png);
+    background-color: #C7DDEA;
+}
+.justright {
+    background: url(/images/adult.png);
+    background-color: #FAB131;
+    background-size: 41% !important;
+}
+.oldfart {
+    background: url(/images/old.png);
+    background-color: #F17949;
+    background-position: top 18px center !important;
+    background-size: 60% !important;
+}
+.card:hover .image {
+    top: -26px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tile {
+    position: relative;
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 340px;
+}
+.tile h1 {
+    text-align: center;
+    color:rgba(0, 0, 0, 0.8);
+}
+.tile p {
+    text-align: center;
+    color:rgba(0, 0, 0, 0.7);
+}
+.tile-blue  {
+    background-color: #C7DDEA;
+}
+.tile-white {
+    background-color: #FFFFFF;
+}
+.tile-red {
+    background-color: #F17949;
+}
+.box-number {
+    font-family: 'Frank Ruhl Libre', serif;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.grid > a {
+    background-color: #A9A19E;
+    color: #000000;
+    top: 1rem;
+    left: 1rem;
+    grid-column: span 6;
+    grid-row: span 1;
+}
+.footer {
+  grid-column: span 6;
+  grid-row: span 1;
+  height: 340px;
+  background-color: #777574;
+}
