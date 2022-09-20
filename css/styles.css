@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-family: 'Fira Sans', sans-serif;
 }
 body {
     background-color: #e5e5e5;
@@ -16,28 +17,70 @@ h1, h2, h3 {
 h1, h2 {
     font-weight: 900;
 }
-h3 {
-    font-weight: 700;
-    padding-bottom: 1rem;
-}
 h1 {
     font-size: 45px;
     line-height: 1;
-    font-weight: 900;
 }
 h2 {
     font-size: 32px;
     color: white;
 }
 h3 {
+    font-weight: 700;
+    padding-bottom: 1rem;
     font-size: 16px;
 }
-
 p {
-    font-family: 'Fira Sans', sans-serif;
     font-size: 14px;
 }
 
+button {
+    background-color: #ffffff;
+    padding: 0.8rem 2.4rem;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    transform: scale(1.05);
+}
+nav {
+  height: 60px;
+  grid-column: 2 / 6;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    opacity: 0.4;
+    width: 20%;
+    height: 57px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-size: 12px;
+}
+.activeNav {
+    opacity: 1;
+}
+nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-decoration-color: #000;
+}
+
+/**  --------- Start page --------  **/
 .grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -100,58 +143,11 @@ p {
     grid-column: span 3;
     grid-row: span 4;
 }
-.top-text {
+.small-top p {
   font-size: 11px;
   color:rgba(0, 0, 0, 0.5);
 }
 
-button {
-    font-family: 'Fira Sans', sans-serif;
-    background-color: #ffffff;
-    padding: 0.8rem 2.4rem;
-    border-radius: 2rem;
-    border: none;
-    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-button:hover {
-    transform: scale(1.05);
-}
-nav {
-  height: 60px;
-  grid-column: 2 / 6;
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-
-nav a {
-    font-family: 'Fira Sans', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000000;
-    opacity: 0.4;
-    width: 20%;
-    height: 57px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    font-size: 12px;
-}
-nav a:nth-child(1) {
-    opacity: 1;
-}
-nav a:hover {
-    opacity: 1;
-    text-decoration: underline;
-    text-decoration-color: #000;
-}
 .main-top {
     padding: 103px 129px 0 107px;
     background: #A9A19E;
@@ -167,10 +163,7 @@ nav a:hover {
     grid-column: span 6;
     grid-row: span 10;
     height: 680px;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .main-middle h1 {
     color: white;
@@ -300,7 +293,6 @@ nav a:hover {
     color: rgba(0, 0, 0, 0.4);
 }
 .grid > a {
-    font-family: 'Fira Sans', sans-serif;
     background-color: #A9A19E;
     color: rgba(0, 0, 0, 0.7);
     text-decoration: none;
@@ -321,4 +313,105 @@ footer {
   grid-column: span 6;
   height: 340px;
   background-color: #777574;
+}
+
+
+
+/**  --------- Contact page --------  **/
+.contact-header {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6;
+    height: 340px;
+    background-color: #C7DDEA;
+}
+.contact-header img{
+    position: absolute;
+    top: 40.6px;
+    right: 115px;
+    
+}
+.contact-main {
+    display: flex;
+    grid-column: span 6;
+    height: 544px;
+    background-color: #A9A19E;
+    padding: 106px 167px 0 78px;
+    justify-content: space-between;
+}
+.contact-main h1{
+    color: #FFFFFF;
+    width:100%;
+    height: 140px;
+    width: 314px;
+}
+.contact-main div{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    max-width: 334px;
+    font-family: fira sans-serif;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+.contact-main div p {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+}
+.contact-main div input, textarea{
+    width: 334px;
+    padding: 18px 16px 16px 18px;
+    margin-bottom: 1.2rem;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.contact-main div input {
+    height: 40px;
+    padding: 10px;
+}
+.contact-main div button {
+    margin-top: 0.5rem;
+}
+
+.contact-bottom {
+    position: relative;
+    grid-column: span 6;
+    height: 407px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/map-contact.png");
+}
+
+.contact-bottom img {
+    margin-top: 1.2rem;
+}
+
+.contact-bottom div {
+    position: absolute;
+    top: 45px;
+    left: 86px;
+    width: 323px;
+    height: 206px;
+    background: #FAB131;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 22px 0 0 22px;
+}
+
+.contact-bottom div h1 {
+    font-size: 44px;
+    color: #FFF;
+}
+.contact-bottom div p {
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.8);
 }
