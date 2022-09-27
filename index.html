@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/styles.css" />
 </head>
     <body>
+        <button class="toggle-menu" onClick="mobileMenu()">
+            Menu
+        </button>
         <div class="grid" id="top">
             <section class="container blue-top"><!-- blå container -->
                 <h1>
@@ -37,7 +40,7 @@
                     Join today
                 </h2>
             </section>
-            <nav>
+            <nav id="mobile-menu">
                 <a href="/" class="activeNav">
                     Home
                 </a>
@@ -165,5 +168,6 @@
                 <p>&copy; Martin Johansson, Per Edvardsson & Jonas Larsson</p>
             </footer>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

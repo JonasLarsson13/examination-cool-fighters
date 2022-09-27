@@ -56,6 +56,7 @@ nav {
   align-items: center;
   display: flex;
   flex-direction: row;
+  z-index: 100;
 }
 
 nav a {
@@ -78,6 +79,17 @@ nav a:hover {
     opacity: 1;
     text-decoration: underline;
     text-decoration-color: #000;
+}
+
+.toggle-menu {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    padding: 0;
+    width: 42px;
+    height: 42px;
 }
 
 /**  --------- Start page --------  **/
@@ -142,6 +154,7 @@ nav a:hover {
 .small-top {
     grid-column: span 3;
     grid-row: span 4;
+    min-height: 315px;
 }
 .small-top p {
   font-size: 11px;
@@ -155,7 +168,6 @@ nav a:hover {
     grid-row: span 9;
     height: 612px;
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
 }
 .main-middle {
@@ -213,6 +225,7 @@ nav a:hover {
     flex-direction: column;
     width: 100%;
     min-width: 256px;
+    max-width: 256px;
     height: 308px;
     background: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -231,7 +244,7 @@ nav a:hover {
     position: relative;
     top: -20px;
     border-radius: 4px;
-    width: 236px;
+    width: 92%;
     height: 150px;
     background-position: top 12px center;
     background-size: 38%;
@@ -342,7 +355,6 @@ footer p {
     position: absolute;
     top: 40.6px;
     right: 115px;
-    
 }
 .contact-main {
     display: flex;
@@ -375,7 +387,7 @@ footer p {
     letter-spacing: -0.02em;
 }
 .contact-main div input, textarea{
-    width: 334px;
+    width: 100%;
     padding: 18px 16px 16px 18px;
     margin-bottom: 1.2rem;
     border-radius: 2px;
@@ -425,4 +437,138 @@ footer p {
 .contact-bottom div p {
     line-height: 24px;
     color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 990px) {
+    .blue-top {
+        padding: 71px 60px 0 60px;
+    }
+    .blue-top img {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .cards {
+        bottom: auto;
+        width: 100%;
+        justify-content: space-evenly;
+        padding-top: 5rem;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+    .main-top {
+        padding: 37px 16px 64px 16px;
+        height: auto;
+    }
+    .main-top-top {
+        justify-content: space-evenly;
+    }
+    .main-middle {
+        height: auto;
+        flex-direction: column;
+        padding: 3rem 48px 5rem 48px;
+    }
+    .main-middle h1 {
+        padding-top: 0;
+    }
+    .main-middle p {
+        color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        max-width: 442px;
+        text-align: center;
+        line-height: 1.4;
+    }
+    .contact-header h1{
+        z-index: 10;
+    }
+    .contact-header img{
+        position: absolute;
+        bottom: 0;
+        right: 2rem;
+        z-index: 2;
+    }
+    .contact-main {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 2rem 16px 5rem 16px;
+    }
+    .contact-main div {
+        max-width: 100%;
+    }
+    .contact-bottom div {
+        position: absolute;
+        top: 2rem;
+        left: auto;
+        width: 60%;
+        height: auto;
+        padding: 22px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .blue-top {
+        grid-column: span 6;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .main-top-top {
+        flex-direction: column;
+    }
+    .main-top-top div {
+        width: 100%;
+    }
+    .main-top-top div button {
+        margin: 1rem 0;
+    }
+    .main-top-top p {
+        width: 100%;
+    }
+    .tile {
+        grid-column: span 6;
+        height: 170px;
+    }
+    .toggle-menu {
+        display: block;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+         background: rgba(255, 255, 255, 0.9);
+         z-index: 100;
+         height: 100vh;
+         width: 80%;
+         flex-direction: column;
+         justify-content: center;
+         transition: all 0.5s ease-in-out;
+         transform: translateX(-100%);
+         opacity: 0;
+         backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+      }
+    .active-mobile-nav {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .contact-bottom div h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .blue-top {
+        padding: 71px 16px 0 16px;
+        min-height: 724px;
+        height: 100vh;
+    }
+    .blue-top img {
+        width: 90%;
+    }
+    .small-top {
+        grid-column: span 6;
+        min-height: 315px;
+    }
 }
